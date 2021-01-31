@@ -35,7 +35,7 @@ def load_all(test_num=100):
                             test_data.append([u, int(i)])
                         line = fd.readline()'''
 
-    with open(config.dataset_1m, 'rb') as f:
+    with open(config.dataset_100k, 'rb') as f:
         dataset = pickle.load(f)
         user_num, item_num = dataset['user_num'], dataset['item_num']
         train_data, test_data = dataset['train_data'], dataset['test_data']

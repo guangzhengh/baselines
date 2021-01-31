@@ -118,8 +118,8 @@ if __name__ == '__main__':
 				torch.save(model, '{}BPR.pt'.format(config.model_path))
 	HR_df = pd.DataFrame(HR_total, columns = ['Top-1','Top-3','Top-5','Top-10','Top-20','Top-50'])
 	NDCG_df = pd.DataFrame(NDCG_total, columns = ['Top-1','Top-3','Top-5','Top-10','Top-20','Top-50'])
-	HR_df.to_csv('HR_bpr_1_30_10m.csv')
-	NDCG_df.to_csv('NDCG_bpr_1_30_10m.csv')
+	HR_df.to_csv('HR_bpr_100k.csv')
+	NDCG_df.to_csv('NDCG_bpr_100k.csv')
 
 	print("End. Best epoch {:03d}: HR = {}, \
 		NDCG = {}".format(best_epoch, best_hr, best_ndcg))
